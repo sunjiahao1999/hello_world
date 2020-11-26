@@ -202,3 +202,10 @@ import numpy as np
 # ani = animation.FuncAnimation(fig=fig, func=animate, frames=1000, init_func=init,
 #                               interval=1, blit=False)
 # plt.show()
+#####################################
+# gold, chihh = 400, 400
+# gold_height = 40 + 10 * np.random.randn(gold)
+# chihh_height = 25 + 6 * np.random.randn(chihh)
+#
+# plt.hist([gold_height, chihh_height],stacked=True, color=['r', 'b'])
+# plt.show()

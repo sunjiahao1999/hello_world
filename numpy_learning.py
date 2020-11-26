@@ -21,6 +21,7 @@ a = np.array([[1, 2, 3],
 # 矩阵乘法
 # print(np.dot(a, a))
 # print(a.dot(a))
+# print(np.matmul(a, a.T))
 
 # e = np.random.random((2, 4))  # 两个括号,随机生成0至1的数组成2行4列的矩阵
 # e = np.random.rand(2,4)
@@ -85,4 +86,3 @@ a = np.array([[1, 2, 3],
 
 # 深复制
 # b=a.copy()
-
