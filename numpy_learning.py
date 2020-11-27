@@ -8,7 +8,6 @@ a = np.array([[1, 2, 3],
 # d=np.linspace(1,10,5)
 # print(a.ndim)
 # print(a.shape)
-# print(a.ndim)
 # print(a.dtype)
 # print(b)
 # print(c)
