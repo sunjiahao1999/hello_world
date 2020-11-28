@@ -84,4 +84,4 @@ a = np.array([[1, 2, 3],
 # print(np.hsplit(a, 3))
 
 # 深复制
-# b=a.copy()
+b=a.copy()
