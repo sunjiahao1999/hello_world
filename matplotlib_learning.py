@@ -80,23 +80,23 @@ import numpy as np
 
 ####################
 # 等高线图
-# n = 256
-# x = np.linspace(-3, 3, n)
-# y = np.linspace(-3, 3, n)
-# X, Y = np.meshgrid(x, y)
-#
-#
-# def f(x, y):
-#     return (1 - x / 2 + x ** 5 + y ** 3) * np.exp(-x ** 2 - y ** 2)
-#
-#
-# plt.figure(figsize=(5, 4))
-# plt.contourf(X, Y, f(X, Y), 8, alpha=0.7, cmap='hot')
-# C = plt.contour(X, Y, f(X, Y), 8, colors='black', linewidths=0.5)
-# plt.clabel(C, inline=True, fontsize=7)
-# plt.xticks(())
-# plt.yticks(())
-# plt.show()
+n = 256
+x = np.linspace(-3, 3, n)
+y = np.linspace(-3, 3, n)
+X, Y = np.meshgrid(x, y)
+
+
+def f(x, y):
+    return (1 - x / 2 + x ** 5 + y ** 3) * np.exp(-x ** 2 - y ** 2)
+
+
+plt.figure(figsize=(5, 4))
+plt.contourf(X, Y, f(X, Y), 8, alpha=0.7, cmap='hot')
+C = plt.contour(X, Y, f(X, Y), 8, colors='black', linewidths=0.5)
+plt.clabel(C, inline=True, fontsize=7)
+plt.xticks(())
+plt.yticks(())
+plt.show()
 #################################
 # 图片
 # a = np.random.rand(3, 3)
@@ -110,19 +110,19 @@ import numpy as np
 ##############################
 # 三维图
 #
-from mpl_toolkits.mplot3d import Axes3D
-
-fig = plt.figure(figsize=(5, 4))
-ax = Axes3D(fig)
-x = np.arange(-4, 4, 0.25)
-y = np.arange(-4, 4, 0.25)
-X, Y = np.meshgrid(x, y)
-R = np.sqrt(X ** 2 + Y ** 2)
-Z = np.sin(R)
-ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='rainbow')
-ax.contour(X, Y, Z, zdir='z', offset=-2, cmap='rainbow')
-ax.set_zlim(-2, 2)
-plt.show()
+# from mpl_toolkits.mplot3d import Axes3D
+#
+# fig = plt.figure(figsize=(5, 4))
+# ax = Axes3D(fig)
+# x = np.arange(-4, 4, 0.25)
+# y = np.arange(-4, 4, 0.25)
+# X, Y = np.meshgrid(x, y)
+# R = np.sqrt(X ** 2 + Y ** 2)
+# Z = np.sin(R)
+# ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='rainbow')
+# ax.contour(X, Y, Z, zdir='z', offset=-2, cmap='rainbow')
+# ax.set_zlim(-2, 2)
+# plt.show()
 ##############################
 # SUBPLOT
 # plt.subplot(2, 1, 1)
