@@ -6,8 +6,8 @@ import numpy as np
 # y2 = 2 * x + 1
 #
 # plt.figure(num=2, figsize=(4, 4))
-# l1, = plt.plot(x, y2, label='up')          #注意l1要加逗号
-# l2, = plt.plot(x, y1, color='orange', linewidth=1.0, linestyle='--')
+# l1, = plt.plot(x, y1, label='up')          #注意l1要加逗号
+# l2, = plt.plot(x, y2, color='orange', linewidth=1.0, linestyle='--')
 # plt.legend(handles=[l2], labels=['bbb'], loc='best')
 #
 # plt.xlim((-5, 5))
@@ -110,19 +110,19 @@ import numpy as np
 ##############################
 # 三维图
 #
-# from mpl_toolkits.mplot3d import Axes3D
-#
-# fig = plt.figure(figsize=(5, 4))
-# ax = Axes3D(fig)
-# x = np.arange(-4, 4, 0.25)
-# y = np.arange(-4, 4, 0.25)
-# X, Y = np.meshgrid(x, y)
-# R = np.sqrt(X ** 2 + Y ** 2)
-# Z = np.sin(R)
-# ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='rainbow')
-# ax.contour(X, Y, Z, zdir='z', offset=-2, cmap='rainbow')
-# ax.set_zlim(-2, 2)
-# plt.show()
+from mpl_toolkits.mplot3d import Axes3D
+
+fig = plt.figure(figsize=(5, 4))
+ax = Axes3D(fig)
+x = np.arange(-4, 4, 0.25)
+y = np.arange(-4, 4, 0.25)
+X, Y = np.meshgrid(x, y)
+R = np.sqrt(X ** 2 + Y ** 2)
+Z = np.sin(R)
+ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='rainbow')
+ax.contour(X, Y, Z, zdir='z', offset=-2, cmap='rainbow')
+ax.set_zlim(-2, 2)
+plt.show()
 ##############################
 # SUBPLOT
 # plt.subplot(2, 1, 1)
