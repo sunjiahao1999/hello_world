@@ -2,6 +2,9 @@ import torch
 from torch.autograd import Variable
 import torch.nn.functional as F
 import numpy as np
+import matplotlib
+
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 # np_data = np.arange(6).reshape((2, 3))
@@ -32,28 +35,28 @@ import matplotlib.pyplot as plt
 
 ##########################
 # 激活函数
-x = torch.linspace(-5, 5, 200)
-x = Variable(x)
-x_np = x.data.numpy()
-
-y_relu = torch.relu(x).data.numpy()
-y_sigmoid = torch.sigmoid(x).data.numpy()
-y_tanh = torch.tanh(x).data.numpy()
-y_softplus = F.softplus(x).data.numpy()
-
-plt.figure(1, figsize=(8, 6))
-plt.subplot(221)
-plt.plot(x_np, y_relu, c='r', label='relu')
-plt.legend(loc='best')
-plt.subplot(222)
-plt.plot(x_np, y_sigmoid, c='r', label='sigmoid')
-plt.legend(loc='best')
-plt.subplot(223)
-plt.plot(x_np, y_tanh, c='r', label='tanh')
-plt.legend(loc='best')
-plt.subplot(224)
-plt.plot(x_np, y_softplus, c='r', label='softplus')
-plt.legend(loc='best')
-plt.savefig(fname='pic.png')
-plt.show()
+# x = torch.linspace(-5, 5, 200)
+# x = Variable(x)
+# x_np = x.data.numpy()
+#
+# y_relu = torch.relu(x).data.numpy()
+# y_sigmoid = torch.sigmoid(x).data.numpy()
+# y_tanh = torch.tanh(x).data.numpy()
+# y_softplus = F.softplus(x).data.numpy()
+#
+# plt.figure(1, figsize=(8, 6))
+# plt.subplot(221)
+# plt.plot(x_np, y_relu, c='r', label='relu')
+# plt.legend(loc='best')
+# plt.subplot(222)
+# plt.plot(x_np, y_sigmoid, c='r', label='sigmoid')
+# plt.legend(loc='best')
+# plt.subplot(223)
+# plt.plot(x_np, y_tanh, c='r', label='tanh')
+# plt.legend(loc='best')
+# plt.subplot(224)
+# plt.plot(x_np, y_softplus, c='r', label='softplus')
+# plt.legend(loc='best')
+# plt.savefig(fname='pic.png')
+# plt.show()
 print(torch.cuda.is_available())  # 判断是否能用cuda加速

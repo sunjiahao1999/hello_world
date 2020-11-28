@@ -80,23 +80,23 @@ import numpy as np
 
 ####################
 # 等高线图
-n = 256
-x = np.linspace(-3, 3, n)
-y = np.linspace(-3, 3, n)
-X, Y = np.meshgrid(x, y)
-
-
-def f(x, y):
-    return (1 - x / 2 + x ** 5 + y ** 3) * np.exp(-x ** 2 - y ** 2)
-
-
-plt.figure(figsize=(5, 4))
-plt.contourf(X, Y, f(X, Y), 8, alpha=0.7, cmap='hot')
-C = plt.contour(X, Y, f(X, Y), 8, colors='black', linewidths=0.5)
-plt.clabel(C, inline=True, fontsize=7)
-plt.xticks(())
-plt.yticks(())
-plt.show()
+# n = 256
+# x = np.linspace(-3, 3, n)
+# y = np.linspace(-3, 3, n)
+# X, Y = np.meshgrid(x, y)
+#
+#
+# def f(x, y):
+#     return (1 - x / 2 + x ** 5 + y ** 3) * np.exp(-x ** 2 - y ** 2)
+#
+#
+# plt.figure(figsize=(5, 4))
+# plt.contourf(X, Y, f(X, Y), 8, alpha=0.7, cmap='hot')
+# C = plt.contour(X, Y, f(X, Y), 8, colors='black', linewidths=0.5)
+# plt.clabel(C, inline=True, fontsize=7)
+# plt.xticks(())
+# plt.yticks(())
+# plt.show()
 #################################
 # 图片
 # a = np.random.rand(3, 3)
@@ -182,30 +182,30 @@ plt.show()
 # plt.show()
 ############################
 # 动画
-# from matplotlib import animation
-#
-# fig, ax = plt.subplots()
-# x = np.arange(0, 2 * np.pi, 0.01)
-# line, = ax.plot(x, np.sin(x))
-#
-#
-# def animate(i):  # 每过一帧调用一次该函数，且i自增1，增长到frames为止
-#     line.set_ydata(np.sin(x + i / 100.0))
-#     return line
-#
-#
-# def init():
-#     line.set_ydata(np.sin(x))
-#     return line
-#
-#
-# ani = animation.FuncAnimation(fig=fig, func=animate, frames=1000, init_func=init,
-#                               interval=1, blit=False)
-# plt.show()
-#####################################
-# gold, chihh = 400, 400
-# gold_height = 40 + 10 * np.random.randn(gold)
-# chihh_height = 25 + 6 * np.random.randn(chihh)
-#
-# plt.hist([gold_height, chihh_height],stacked=True, color=['r', 'b'])
-# plt.show()
+from matplotlib import animation
+
+fig, ax = plt.subplots()
+x = np.arange(0, 2 * np.pi, 0.01)
+line, = ax.plot(x, np.sin(x))
+
+
+def animate(i):  # 每过一帧调用一次该函数，且i自增1，增长到frames为止
+    line.set_ydata(np.sin(x + i / 100.0))
+    return line
+
+
+def init():
+    line.set_ydata(np.sin(x))
+    return line
+
+
+ani = animation.FuncAnimation(fig=fig, func=animate, frames=1000, init_func=init,
+                              interval=1, blit=False)
+plt.show()
+####################################
+gold, chihh = 400, 400
+gold_height = 40 + 10 * np.random.randn(gold)
+chihh_height = 25 + 6 * np.random.randn(chihh)
+
+plt.hist([gold_height, chihh_height],stacked=True, color=['r', 'b'])
+plt.show()
