@@ -49,6 +49,9 @@ a = np.array([[1, 2, 3],
 # print((a.T).dot(a))
 # print(np.clip(a,5,7)) #将大于7小于5的数转化为7和5
 
+# # 矩阵的逆
+# print(a.I)
+
 # # 索引
 # print(a[1, 2])
 # print(a[1][2])
@@ -84,4 +87,4 @@ a = np.array([[1, 2, 3],
 # print(np.hsplit(a, 3))
 
 # 深复制
-b=a.copy()
+# b=a.copy()
