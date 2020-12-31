@@ -58,3 +58,6 @@ import matplotlib.pyplot as plt
 # plt.show()
 ##########################
 print(torch.cuda.is_available())  # 判断是否能用cuda加速
+print(torch.cuda.device_count())
+x=torch.tensor([1,2,3],device=torch.device('cuda:0'))
+print(x)
